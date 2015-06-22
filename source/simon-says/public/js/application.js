@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	clickMeListener();
-
-});
-
-var clickMeListener = function() {
 	$('#get_color').on('click', function(event) {
 		event.preventDefault();
 
@@ -25,5 +20,6 @@ var clickMeListener = function() {
 			console.log('FAIL', response)
 		})
 
-	})
-}
+	});
+	
+});
