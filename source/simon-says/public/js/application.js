@@ -24,8 +24,7 @@ var changeColor = function() {
       })
 
       .done(function(response) {
-        // insert jquery
-        console.log(response);
+        $( "ul#color_me li:nth-child(" + response.cell +")").css("background-color", response.color);
       })
 
       .fail(function(response) {
@@ -35,27 +34,5 @@ var changeColor = function() {
 
 };
 
-// var switchLogintoSignUp = function(){
-//   $("#signup").on("click", function(event){
-//       var url = $(this).attr("href");
-
-//       event.preventDefault();
-
-//       $.ajax({
-//         type: "get",
-//         url: url,
-//       })
-
-//       .done(function(response){
-//           $("#splash").append(response);
-//           $("#login-form").hide();
-//           $("#signup-form").show();
-//       })
-
-//       .error(function(response){
-//         console.log("Information not sent. Check code for SwitchLoginSignUp();", response);
-//       })
-//   })
-// };
 
 
